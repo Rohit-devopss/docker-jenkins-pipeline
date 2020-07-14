@@ -19,7 +19,7 @@ pipeline {
       agent any
       steps {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          sh 'docker push sdurgawad/hello-world:latest'
+          sh 'docker push sdurgawad/hello-world:1.0'
         }
       }
 	}
