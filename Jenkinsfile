@@ -13,7 +13,7 @@ pipeline {
 	stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t sdurgawad/hello-world:latest .'
+        sh 'docker build -t sdurgawad/hello-world:1.0 .'
       }
     }
 	stage ('Docker Push') {
