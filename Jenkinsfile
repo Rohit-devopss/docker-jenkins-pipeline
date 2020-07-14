@@ -4,13 +4,12 @@ pipeline {
   agent none
   stages {
     stage('Maven Install') {
-	  agent any
-      steps {
-	        sh 'mvn clean'
+	agent any
+      	steps {
 		sh 'mvn -f pom.xml clean install'
-      }
+      	}
     }
-	stage('Docker Build') {
+    stage('Docker Build') {
       agent any
       steps {
         sh 'docker build -t sdurgawad/hello-world:1.0 .'
